@@ -1,0 +1,6 @@
+C:\Users\WPRSOI\source\repos\ArrayTest\ArrayTestCSharp\Cli\ArrayTest.dll
+C:\Users\WPRSOI\source\repos\ArrayTest\ArrayTestCSharp\Cli\ArrayTest.pdb
+C:\Users\WPRSOI\source\repos\ArrayTest\ArrayTestCSharp\obj\Release\ArrayTestCSharp.csproj.AssemblyReference.cache
+C:\Users\WPRSOI\source\repos\ArrayTest\ArrayTestCSharp\obj\Release\ArrayTestCSharp.csproj.CoreCompileInputs.cache
+C:\Users\WPRSOI\source\repos\ArrayTest\ArrayTestCSharp\obj\Release\ArrayTest.dll
+C:\Users\WPRSOI\source\repos\ArrayTest\ArrayTestCSharp\obj\Release\ArrayTest.pdb
