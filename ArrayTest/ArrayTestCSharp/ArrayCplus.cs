@@ -38,6 +38,12 @@ namespace ArrayTest
         public IecString80 sName;
         public cType sType;
         public IecString80 sAttriibute;
+        [Initialization]
+        public void __Init()
+        {
+            //  No implementation in C# part; implement in native method
+
+        }
     }
 
     [Native]
