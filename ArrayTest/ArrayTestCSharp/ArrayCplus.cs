@@ -35,11 +35,8 @@ namespace ArrayTest
     [Structure]
     public struct CreateDataType
     {
-        [Input]
         public IecString80 sName;
-        [Input]
         public cType sType;
-        [Input]
         public IecString80 sAttriibute;
     }
 
