@@ -12,6 +12,7 @@ ArrayTest::CreateDataType __PInvoke__ ArrayTest::IntArrayFB::get_Item(Int32 p0)
     CreateDataType* pvalue = &Anchor;
     CreateDataType result = *(pvalue + p0);
     return result;
+
 }
 
 void __PInvoke__ ArrayTest::IntArrayFB::set_Item(Int32 p0, ArrayTest::CreateDataType p1)
@@ -19,4 +20,15 @@ void __PInvoke__ ArrayTest::IntArrayFB::set_Item(Int32 p0, ArrayTest::CreateData
     // implement your code here !
     CreateDataType* pvalue = &Anchor;
     *(pvalue + p0) = p1;
+
 }
+
+void __PInvoke__ ArrayTest::IntArrayFB::Init()
+{
+    // implement your code here !
+    ArrayTest::CreateDataType* pvalue = &Anchor;
+    for (Int32 index = 0; index <=20; index ++){
+        pvalue[index].Init();
+    }
+}
+
