@@ -54,6 +54,7 @@ public:
     struct CreateDataType
     {
         // @Begin automatically generated code, do not modify native structs !
+        void Init();
         pcoslib::IecString80 sName;  // offset=0
                 uint8 __pad1[2];
         cType sType;  // offset=88
@@ -68,6 +69,7 @@ public:
         // @Begin automatically generated code, do not modify native structs !
         CreateDataType get_Item(Int32 p0);
         void set_Item(Int32 p0, CreateDataType p1);
+        void Init();
         CreateDataType Anchor;  // offset=0
                 uint8 __pad1[3644];
         // Size of structure = 3824 Bytes
