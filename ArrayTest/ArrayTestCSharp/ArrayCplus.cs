@@ -65,38 +65,12 @@ namespace ArrayTest
         {
             get
             {
-                if (index >= (0) && index <= (20))
-                {
-                    unsafe
-                    {
-                        fixed (CreateDataType* pValue = &Anchor)
-                        {
-                            CreateDataType result = *(pValue + index);
-                            return result;
-                        }
-                    }
-                }
-                else
-                {
-                    throw new IndexOutOfRangeException();
-                }
+                // No implementation in C#
+                throw new Exception();
             }
             set
             {
-                if (index >= (0) && index <= (20))
-                {
-                    unsafe
-                    {
-                        fixed (CreateDataType* pValue = &Anchor)
-                        {
-                            *(pValue + index) = value;
-                        }
-                    }
-                }
-                else
-                {
-                    throw new IndexOutOfRangeException();
-                }
+                //No implementation in C#
             }
         }
         
