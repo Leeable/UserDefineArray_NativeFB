@@ -38,6 +38,11 @@ namespace ArrayTest
         public IecString80 sName;
         public cType sType;
         public IecString80 sAttriibute;
+        [Initialization]
+        public void Init()
+        {
+            // No implementation in native methods
+        }
     }
 
     [Native]
@@ -94,6 +99,13 @@ namespace ArrayTest
                 }
             }
         }
+        
+        [Initialization]
+        public void Init()
+        {
+            // No implementation in native methods
+        }
+
     }
 
     [Native]
