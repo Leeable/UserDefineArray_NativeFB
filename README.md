@@ -205,7 +205,7 @@ void __PInvoke__ ArrayTest::IntArrayFB::Init()
 }
 ```
 
-## Generate the pclwx library 
+## Generate the pcwlx library 
 
 Assume the reader is familiar with the process.
 
