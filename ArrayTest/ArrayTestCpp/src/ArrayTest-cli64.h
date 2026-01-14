@@ -1,6 +1,6 @@
 #ifndef __ARRAYTEST_H__
 #define __ARRAYTEST_H__
-// PHOENIX CONTACT Software eCLR Native Library Builder version 3.0.1033.0
+// PHOENIX CONTACT Software eCLR Native Library Builder version 3.0.1043.0
 // ArrayTest.h native assembly header template.
 // Use this file to implement and/or extend your native c++ classes.
 // Insert additional private methods and member only outside of the @Begin/@End comment pair
@@ -71,8 +71,8 @@ public:
         void set_Item(Int32 p0, CreateDataType p1);
         void Init();
         CreateDataType Anchor;  // offset=0
-                uint8 __pad1[3644];
-        // Size of structure = 3824 Bytes
+                uint8 __pad1[3600];
+        // Size of structure = 3780 Bytes
         // @End automatically generated code
     };
 
