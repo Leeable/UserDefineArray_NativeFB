@@ -67,7 +67,7 @@ the final size for this **CreateDataType** is 180
 
 and in the **public struct IntArrayFB**, we don't need to implment the **get** and **set** function, those function will be implment in C++
 
-```
+```C#
     [Native]
     [Enumeration]
     public enum cType
@@ -135,5 +135,77 @@ and in the **public struct IntArrayFB**, we don't need to implment the **get** a
     }
 ```
 
+## Remove Error in cli32 and cli64 header files
 
+When the CSharp codes generate the Cpp codes, there will an error in the *cli32.h and *cli64.h, just remove `#error structs as method result not supported` and `#error arg 2: structs as method arguments not supported`
+
+```c++
+    struct IntArrayFB
+    {
+        // @Begin automatically generated code, do not modify native structs !
+#error structs as method result not supported
+        CreateDataType get_Item(Int32 p0);
+#error arg 2: structs as method arguments not supported
+        void set_Item(Int32 p0, CreateDataType p1);
+        void Init();
+        CreateDataType Anchor;  // offset=0
+                uint8 __pad1[3600];
+        // Size of structure = 3780 Bytes
+        // @End automatically generated code
+    };
+```
+
+## Implement the get_Item() and set_Item() function
+
+```c++
+ArrayTest::CreateDataType __PInvoke__ ArrayTest::IntArrayFB::get_Item(Int32 p0)
+{
+    // implement your code here !
+    CreateDataType* pvalue = &Anchor;
+    CreateDataType result = *(pvalue + p0);
+    return result;
+}
+
+void __PInvoke__ ArrayTest::IntArrayFB::set_Item(Int32 p0, ArrayTest::CreateDataType p1)
+{
+    // implement your code here !
+    CreateDataType* pvalue = &Anchor;
+    *(pvalue + p0) = p1;
+}
+```
+
+## Implement the Init() function
+
+if user use String as variable, for example this case, the string need to be inited.
+
+In the CreateDataType-cli.cpp
+
+```c++
+void __PInvoke__ ArrayTest::CreateDataType::Init()
+{
+    // implement your code here !
+    this->sName.SetCapacity(this->sName._Capacity_);
+    this->sName.Empty();
+    this->sType = cType::EM;
+    this->sAttriibute.SetCapacity(this->sAttriibute._Capacity_);
+    this->sAttriibute.Empty();
+
+}
+```
+In the IntArrayFB-cli.cpp
+
+```c++
+void __PInvoke__ ArrayTest::IntArrayFB::Init()
+{
+    // implement your code here !
+    ArrayTest::CreateDataType* pvalue = &Anchor;
+    for (Int32 index = 0; index <=20; index ++){
+        pvalue[index].Init();
+    }
+}
+```
+
+## Generate the pclwx library 
+
+Assume the reader is familiar with the process.
 
