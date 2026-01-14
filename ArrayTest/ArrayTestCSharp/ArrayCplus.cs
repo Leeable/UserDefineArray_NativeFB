@@ -47,7 +47,7 @@ namespace ArrayTest
 
     [Native]
     [Array(1), ArrayDimension(0, 0, 20), DataType("CreateDataType")]
-    [StructLayout(LayoutKind.Explicit, Size = 3822)]
+    [StructLayout(LayoutKind.Explicit, Size = 3780)]
     public struct IntArrayFB
     {
         // Helper containing constants to have a
@@ -108,3 +108,4 @@ namespace ArrayTest
         }
     }
 }
+
